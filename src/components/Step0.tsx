@@ -4,6 +4,7 @@ import { alpha } from '@mui/material/styles';
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
 import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+import StepHeader from './StepHeader';
 
 function HexIcon({ children }: { children: React.ReactNode }) {
   return (
@@ -120,13 +121,10 @@ export interface StepProps {
 export default function Step0({ next }: StepProps) {
   return (
     <Box>
-      <Typography variant="h5" fontWeight={700} gutterBottom>
-        Join Us!
-      </Typography>
-
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-        To begin this journey, tell us what type of account you’d be opening.
-      </Typography>
+      <StepHeader
+        title="Join Us!"
+        subtitle="To begin this journey, tell us what type of account you’d be opening."
+      />
 
       <Stack spacing={2.5}>
         <OptionCard
