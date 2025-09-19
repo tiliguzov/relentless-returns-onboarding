@@ -51,11 +51,11 @@ function Sider() {
         zIndex={1}
         m={8}
         mr={12}
-        display={'flex'}
-        flexDirection={'column'}
-        gap={'20vh'}
+        display="flex"
+        flexDirection="column"
+        gap="20vh"
       >
-        <Box display={'flex'} alignItems={'flex-end'} gap={1}>
+        <Box display="flex" alignItems="flex-end" gap={1}>
           <Box
             component="img"
             src={Oasis}
@@ -64,18 +64,18 @@ function Sider() {
           <Typography
             variant="body2"
             fontWeight={500}
-            color={'common.white'}
-            fontFamily={'"Montserrat", sans-serif'}
+            color="common.white"
+            fontFamily='"Montserrat", sans-serif'
           >
             Oasis.
           </Typography>
         </Box>
-        <Box display={'flex'} flexDirection={'column'} gap={3}>
-          <Box display={'flex'} gap={1} alignItems={'start'}>
+        <Box display="flex" flexDirection="column" gap={3}>
+          <Box display="flex" gap={1} alignItems="start">
             <Typography
               variant="h1"
-              color={'secondary.main'}
-              fontFamily={'"Gayathri", sans-serif'}
+              color="secondary.main"
+              fontFamily='"Gayathri", sans-serif'
             >
               “
             </Typography>
@@ -83,7 +83,7 @@ function Sider() {
           <Typography
             color="common.white"
             mt={-10}
-            lineHeight={'38px'}
+            lineHeight="38px"
             fontWeight={300}
             fontSize={20}
           >
@@ -91,11 +91,11 @@ function Sider() {
             Letraset used it on their dry-transfer sheets, and again during the
             90s as desktop publishers bundled the text with their software.
           </Typography>
-          <Box display={'flex'} gap={1} alignItems={'center'}>
+          <Box display="flex" gap={1} alignItems="center">
             <Typography color="common.white">Vincent Obi</Typography>
             <CheckCircleIcon color="success" />
           </Box>
-          <Box display={'flex'} justifyContent={'flex-end'}>
+          <Box display="flex" justifyContent="flex-end">
             <Box
               component="img"
               src={Vector3}

@@ -22,7 +22,7 @@ function StepDisplay({ step }: StepDisplayProps) {
   }, [step]);
 
   return (
-    <Box display={'flex'} flexDirection={'column'} alignItems="flex-end">
+    <Box display="flex" flexDirection="column" alignItems="flex-end">
       <Typography variant="body2" color="textSecondary">
         STEP 0{step}/03
       </Typography>

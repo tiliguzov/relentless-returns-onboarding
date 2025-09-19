@@ -27,6 +27,7 @@ module.exports = {
     },
   },
   rules: {
+    'react/jsx-curly-brace-presence': ['error', 'never'],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

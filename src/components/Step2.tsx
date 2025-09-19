@@ -5,7 +5,7 @@ import FormField from './FormField';
 
 function Step2({ next }: StepProps) {
   return (
-    <Box display={'flex'} flexDirection={'column'} gap={2}>
+    <Box display="flex" flexDirection="column" gap={2}>
       <Box>
         <StepHeader
           title="Complete Your Profile!"
@@ -13,6 +13,7 @@ function Step2({ next }: StepProps) {
         />
         <Divider />
       </Box>
+
       <FormField label="Phone number" placeholder="Enter your phone number" />
       <FormField label="Your address" placeholder="Please enter address" />
       <FormField label="Country of residence" placeholder="Please select" />

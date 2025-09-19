@@ -14,7 +14,7 @@ function App() {
   const topRightContent = useMemo(() => {
     if (step === 0) {
       return (
-        <Typography variant="body2" color={'textSecondary'}>
+        <Typography variant="body2" color="textSecondary">
           Already have an account? <Link>Sign In</Link>
         </Typography>
       );

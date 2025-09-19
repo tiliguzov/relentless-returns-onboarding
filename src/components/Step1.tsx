@@ -11,7 +11,7 @@ import FormField from './FormField';
 
 function Step1({ next }: StepProps) {
   return (
-    <Box display={'flex'} flexDirection={'column'} gap={2}>
+    <Box display="flex" flexDirection="column" gap={2}>
       <Box>
         <StepHeader
           title="Register Individual Account!"
@@ -19,6 +19,7 @@ function Step1({ next }: StepProps) {
         />
         <Divider />
       </Box>
+
       <FormField label="Your fullname*" placeholder="Enter your full name" />
       <FormField label="Email address*" placeholder="Enter email address" />
       <FormField label="Create password*" placeholder="Enter password" />
@@ -28,6 +29,7 @@ function Step1({ next }: StepProps) {
         sx={{ color: 'text.secondary' }}
         slotProps={{ typography: { variant: 'body2' } }}
       />
+
       <Button
         variant="contained"
         onClick={next}

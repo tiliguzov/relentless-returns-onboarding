@@ -5,7 +5,7 @@ import FormField from './FormField';
 
 function Step3({ next }: StepProps) {
   return (
-    <Box display={'flex'} flexDirection={'column'} gap={2}>
+    <Box display="flex" flexDirection="column" gap={2}>
       <Box>
         <StepHeader
           title="Complete Your Profile!"
@@ -13,10 +13,12 @@ function Step3({ next }: StepProps) {
         />
         <Divider />
       </Box>
+
       <FormField
         label="Bank verification number (BVN)"
         placeholder="Enter your BVN"
       />
+
       <Button
         variant="contained"
         onClick={next}

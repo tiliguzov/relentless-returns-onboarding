@@ -20,24 +20,17 @@ function Layout({ topLeftContent, topRightContent, children }: LayoutProps) {
   }, [topLeftContent, topRightContent]);
 
   return (
-    <Box display="flex" alignItems="stretch" height={'100vh'} width={'100vw'}>
+    <Box display="flex" alignItems="stretch" height="100vh" width="100vw">
       <Sider />
-      <Box
-        flex={1}
-        m={8}
-        mr={10}
-        mb={20}
-        display={'flex'}
-        flexDirection={'column'}
-      >
-        <Box display={'flex'} justifyContent={topBarAlign}>
+      <Box flex={1} m={8} mr={10} mb={20} display="flex" flexDirection="column">
+        <Box display="flex" justifyContent={topBarAlign}>
           {topLeftContent}
           {topRightContent}
         </Box>
         <Box
-          display={'flex'}
-          alignItems={'center'}
-          justifyContent={'center'}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
           flex={1}
         >
           {children}
