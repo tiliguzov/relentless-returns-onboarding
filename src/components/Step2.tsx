@@ -1,6 +1,7 @@
-import { Box, Button, Divider, TextField } from '@mui/material';
+import { Box, Button, Divider } from '@mui/material';
 import StepHeader from './StepHeader';
 import { StepProps } from './Step0';
+import FormField from './FormField';
 
 function Step2({ next }: StepProps) {
   return (
@@ -12,11 +13,16 @@ function Step2({ next }: StepProps) {
         />
         <Divider />
       </Box>
-      <TextField label="Phone number" variant="outlined" fullWidth />
-      <TextField label="Your address" variant="outlined" fullWidth />
-      <TextField label="Country of residence" variant="outlined" fullWidth />
+      <FormField label="Phone number" placeholder="Enter your phone number" />
+      <FormField label="Your address" placeholder="Please enter address" />
+      <FormField label="Country of residence" placeholder="Please select" />
 
-      <Button variant="contained" onClick={next} size="large">
+      <Button
+        variant="contained"
+        onClick={next}
+        size="large"
+        sx={{ height: 64, mt: 2 }}
+      >
         Save & Continue
       </Button>
     </Box>

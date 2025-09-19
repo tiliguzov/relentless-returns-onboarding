@@ -4,10 +4,10 @@ import {
   Checkbox,
   Divider,
   FormControlLabel,
-  TextField,
 } from '@mui/material';
 import StepHeader from './StepHeader';
 import { StepProps } from './Step0';
+import FormField from './FormField';
 
 function Step1({ next }: StepProps) {
   return (
@@ -19,14 +19,21 @@ function Step1({ next }: StepProps) {
         />
         <Divider />
       </Box>
-      <TextField label="Your fullname*" variant="outlined" fullWidth />
-      <TextField label="Email address*" variant="outlined" fullWidth />
-      <TextField label="Create password*" variant="outlined" fullWidth />
+      <FormField label="Your fullname*" placeholder="Enter your full name" />
+      <FormField label="Email address*" placeholder="Enter email address" />
+      <FormField label="Create password*" placeholder="Enter password" />
       <FormControlLabel
-        control={<Checkbox />}
+        control={<Checkbox size="small" />}
         label="I agree to terms & conditions"
+        sx={{ color: 'text.secondary' }}
+        slotProps={{ typography: { variant: 'body2' } }}
       />
-      <Button variant="contained" onClick={next} size="large">
+      <Button
+        variant="contained"
+        onClick={next}
+        size="large"
+        sx={{ height: 64, mt: 2 }}
+      >
         Register Account
       </Button>
     </Box>

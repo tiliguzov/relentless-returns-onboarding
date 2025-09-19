@@ -1,6 +1,7 @@
-import { Box, Button, Divider, TextField } from '@mui/material';
+import { Box, Button, Divider } from '@mui/material';
 import StepHeader from './StepHeader';
 import { StepProps } from './Step0';
+import FormField from './FormField';
 
 function Step3({ next }: StepProps) {
   return (
@@ -12,12 +13,16 @@ function Step3({ next }: StepProps) {
         />
         <Divider />
       </Box>
-      <TextField
+      <FormField
         label="Bank verification number (BVN)"
-        variant="outlined"
-        fullWidth
+        placeholder="Enter your BVN"
       />
-      <Button variant="contained" onClick={next} size="large">
+      <Button
+        variant="contained"
+        onClick={next}
+        size="large"
+        sx={{ height: 64, mt: 2 }}
+      >
         Save & Continue
       </Button>
     </Box>
