@@ -1,7 +1,64 @@
-import Layout from './Layout';
+import { useMemo, useState } from 'react';
+import Layout from './components/Layout';
+import { Box, Button, Link, Typography } from '@mui/material';
+import StepDisplay from './components/StepDisplay';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Step0 from './components/Step0';
 
 function App() {
-  return <Layout />;
+  const [step, setStep] = useState(1);
+
+  const topRightContent = useMemo(() => {
+    if (step === 0) {
+      return (
+        <Typography variant="body2" color={'textSecondary'}>
+          Already have an account? <Link>Sign In</Link>
+        </Typography>
+      );
+    }
+
+    return <StepDisplay step={step} />;
+  }, [step]);
+
+  const topLeftContent = useMemo(() => {
+    if (step > 0) {
+      return (
+        <Button
+          onClick={() => setStep(step - 1)}
+          startIcon={<ArrowBackIosIcon />}
+          variant="text"
+          sx={{ border: 'none', color: 'grey.600' }}
+        >
+          Back
+        </Button>
+      );
+    }
+
+    return null;
+  }, [step]);
+
+  const content = useMemo(() => {
+    switch (step) {
+      case 0:
+        return <Step0 next={() => setStep(1)} />;
+      case 1:
+        return <Step0 next={() => setStep(1)} />;
+      case 2:
+        return <Step0 next={() => setStep(1)} />;
+      case 3:
+        return <Step0 next={() => setStep(1)} />;
+      default:
+        return null;
+    }
+  }, [step]);
+
+  return (
+    <Layout
+      topLeftContent={topLeftContent}
+      topRightContent={topRightContent}
+      children={<Box maxWidth={400}>{content}</Box>}
+    />
+  );
 }
 
 export default App;

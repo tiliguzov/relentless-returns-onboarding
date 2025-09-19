@@ -1,9 +1,9 @@
 import { alpha, Box, Typography } from '@mui/material';
-import Vector1 from './assets/Vector1.svg';
-import Vector2 from './assets/Vector2.svg';
-import Vector3 from './assets/Vector3.svg';
-import Oasis from './assets/Oasis.svg';
-import backgroundUrl from './assets/background.png';
+import Vector1 from '../assets/Vector1.svg';
+import Vector2 from '../assets/Vector2.svg';
+import Vector3 from '../assets/Vector3.svg';
+import Oasis from '../assets/Oasis.svg';
+import backgroundUrl from '../assets/background.png';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function Sider() {
