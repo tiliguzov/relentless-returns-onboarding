@@ -9,7 +9,7 @@ import Step2 from './components/Step2';
 import Step3 from './components/Step3';
 
 function App() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
 
   const topRightContent = useMemo(() => {
     if (step === 0) {
